@@ -4,6 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 import React from 'react';
 import { signOut } from '../services/auth';
 import { ROUTES } from '../constants';
+import { AccountSettings } from '../pages';
 
 export const Navbar = withRouter(() => {
     return (
@@ -22,6 +23,9 @@ export const Navbar = withRouter(() => {
                     <Menu>
                         <Menu.Item key="0" onClick={() => signOut()}>
                             Sign Out
+                        </Menu.Item>
+                        <Menu.Item key="1">
+                            <AccountSettings />
                         </Menu.Item>
                     </Menu>
                 }
